@@ -1,0 +1,10 @@
+.caja {
+    border: 1px solid #aaaaaa;
+    height: 86px;
+    width: 300px;
+    margin-bottom: 100px;
+}
+
+.margin-row {
+    margin-bottom: 20px;
+}
