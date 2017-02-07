@@ -1,9 +1,12 @@
-.caja {
+.caja-equipo {
     border: 1px solid #aaaaaa;
     height: 86px;
     width: 300px;
     margin-top: 80px;
-    margin-bottom: 120px;
+}
+
+.caja-pilotos {
+    margin-top: 150px;
 }
 
 .margin-row {
@@ -16,4 +19,8 @@
 
 .perfil-piloto {
     transition: transform 1s;
+}
+
+.tooltip-caja {
+    color: #aaaaaa;
 }

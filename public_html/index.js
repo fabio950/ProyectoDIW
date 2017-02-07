@@ -86,37 +86,53 @@ function iniciarJuego(vidaMaxima) {
 
 function modalVictoria() {
     $("#f1ModalBody").children().remove();
-
+    $(".modal-content").addClass("panel-success");
     $(".modal-title").text("¡¡¡VICTORIA!!!");
 
     $("#f1Modal").modal("show");
 
     imgVictoria = "<img class='img-responsive center-block animated rubberBand' src='assests/img/trofeo.jpg'>";
-    btnReintentar = "<button id='btnJugarDeNuevo' class='center-block btn btn-primary'>Jugar de nuevo</button>";
-
+    
+    botonesModal = "<div class='btn-group'>" + 
+            "<button type='button' id='btnJugarDeNuevo' class='btn btn-success'>Jugar de nuevo</button>" +
+            "<button type='button' id='btnSalir' class='btn btn-default'>Salir</button>" +
+            "</div>";
+    
     $("#f1ModalBody").append(imgVictoria);
-    $("#f1ModalFooter").append(btnReintentar);
+    $("#f1ModalFooter").append(botonesModal);
 
     $("#btnJugarDeNuevo").click(function () {
         location.reload();
+    });
+    
+    $("#btnSalir").click(function () {
+        close();
     });
 }
 
 function modalDerrota() {
     $("#f1ModalBody").children().remove();
-
+    $(".modal-content").addClass("panel-danger");
     $(".modal-title").text("Derrota...");
 
     $("#f1Modal").modal("show");
 
-    imgVictoria = "<img class='img-responsive center-block animated zoomIn' src='assests/img/game-over.jpg'>";
-    btnReintentar = "<button id='btnReintentar' class='center-block btn btn-danger'>Reintentar</button>";
+    imgDerrota = "<img class='img-responsive center-block animated zoomIn' src='assests/img/game-over.jpg'>";
 
-    $("#f1ModalBody").append(imgVictoria);
-    $("#f1ModalFooter").append(btnReintentar);
+    botonesModal = "<div class='btn-group'>" + 
+            "<button type='button' id='btnReintentar' class='btn btn-danger'>Reintentar</button>" +
+            "<button type='button' id='btnSalir' class='btn btn-default'>Salir</button>" +
+            "</div>";
+
+    $("#f1ModalBody").append(imgDerrota);
+    $("#f1ModalFooter").append(botonesModal);
 
     $("#btnReintentar").click(function () {
         location.reload();
+    });
+    
+    $("#btnSalir").click(function () {
+        close();
     });
 }
 
