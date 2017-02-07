@@ -8,3 +8,11 @@
 .margin-row {
     margin-bottom: 20px;
 }
+
+.botones-dificultad {
+    width: 200px;
+}
+
+.perfil-piloto {
+    transition: transform 1s;
+}
