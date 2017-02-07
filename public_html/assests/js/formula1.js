@@ -1,17 +1,16 @@
-function F1Game(equipo, vidas, vidasMaximas) {
-    if (vidas < 1) {
+function F1Game(equipo, vidas, vidaMaximas) {
+    if (vidas < 1  || vidaMaximas < 1) {
         throw "El numero de vidas debe ser mayor de 0";
     } else {
         this.equipo = equipo;
         this.vidas = vidas;
-        this.vidasMaximas = vidasMaximas; 
+        this.vidaMaximas = vidaMaximas; 
         this.aciertos = 0;
-        this.reset();
     }
 }
 
-F1Game.prototype.reset = function () {
-
+F1Game.prototype.getEquipo = function () {
+    return this.equipo;
 };
 
 F1Game.prototype.getNumVidas = function () {
@@ -19,7 +18,7 @@ F1Game.prototype.getNumVidas = function () {
 };
 
 F1Game.prototype.getNumVidasMaximas = function () {
-    return this.vidasMaximas;
+    return this.vidaMaximas;
 };
 
 F1Game.prototype.eliminarUnaVida = function () {
