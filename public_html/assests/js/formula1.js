@@ -34,7 +34,7 @@ F1Game.prototype.anyadirAcierto = function () {
 };
 
 F1Game.prototype.coincidePilotoEnEquipo = function (idEquipoPiloto) {
-    if (idEquipoPiloto === this.equipo) {
+    if (idEquipoPiloto === this.getEquipo()) {
         return true;
     } else {
         this.eliminarUnaVida();
@@ -42,13 +42,13 @@ F1Game.prototype.coincidePilotoEnEquipo = function (idEquipoPiloto) {
     }
 };
 
-F1Game.prototype.victoria = function () {
+F1Game.prototype.isVictoria = function () {
     if(this.getNumAciertos()===2){
         return 1;
     }
 };
 
-F1Game.prototype.derrota = function () {
+F1Game.prototype.isDerrota = function () {
     if(this.getNumVidas()===0){
         return -1;
     }
